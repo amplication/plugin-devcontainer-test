@@ -1,0 +1,16 @@
+{
+  "name": "sample application",
+  "service": "server",
+  "dockerComposeFile": [
+    "../app/server/docker-compose.yml",
+    "../app/admin/docker-compose.yml"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "initializeCommand": "bash .devcontainer/init.sh $(pwd)",
+  "forwardPorts": [
+    3000,
+    3001
+  ]
+}
